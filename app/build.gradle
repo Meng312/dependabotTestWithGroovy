@@ -18,6 +18,8 @@ dependencies {
     implementation supportDependencies.hibernate_entitymanager
     implementation supportDependencies.hibernate_core
     implementation supportDependencies.c3p0
+    testImplementation supportDependencies.junit_jupiter
+    testRuntimeOnly rootProject.ext.supportDependencies.junit_engine
 }
 
 test {
