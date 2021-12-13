@@ -1,2 +1,5 @@
 rootProject.name = 'dependabottest2'
 
+include("app")
+include 'app'
+

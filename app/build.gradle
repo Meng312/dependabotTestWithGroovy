@@ -1,0 +1,27 @@
+buildscript {
+    apply from: '../dependencies.gradle'
+}
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation supportDependencies.springfox_boot_starter
+    implementation supportDependencies.hibernate_entitymanager
+    implementation supportDependencies.hibernate_core
+    implementation supportDependencies.c3p0
+    testImplementation supportDependencies.junit_jupiter
+    testRuntimeOnly rootProject.ext.supportDependencies.junit_engine
+}
+
+test {
+    useJUnitPlatform()
+}
